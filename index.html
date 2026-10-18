@@ -53,17 +53,6 @@ section{margin-top:22px}
 h2{font-size:22px;color:var(--goldlt);text-align:center;font-weight:700}
 .sub{text-align:center;color:var(--softgold);font-size:13.5px;margin-top:4px}
 
-/* ---------- today's plan lanterns ---------- */
-.plan{display:flex;gap:10px;margin-top:14px}
-.lantern{flex:1;min-width:0;text-decoration:none;color:var(--cream);text-align:center;
-  background:linear-gradient(180deg,rgba(255,201,77,.16),rgba(58,30,99,.9) 42%);
-  border:1.5px solid rgba(255,201,77,.55);border-radius:16px;padding:10px 6px 12px;min-height:118px;display:block}
-.lantern:active{transform:scale(.98)}
-.lantern svg{display:block;margin:0 auto 4px}
-.lantern .lname{font-size:16.5px;line-height:1.15}
-.lantern .lmark{font-size:11.5px;color:var(--softgold);margin-top:3px;line-height:1.25}
-.lantern .lgo{font-size:12.5px;color:var(--goldlt);font-weight:700;margin-top:5px}
-
 /* ---------- island map ---------- */
 .mapwrap{position:relative;margin-top:8px}
 .pathsvg{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
@@ -229,13 +218,6 @@ footer .f2{font-size:12.5px;margin-top:4px}
 </header>
 
 <main>
-<!-- ================= TODAY'S PLAN ================= -->
-<section aria-label="Today's plan">
-  <h2>Today&rsquo;s Plan</h2>
-  <p class="sub" id="planDay">Your three lanterns for today</p>
-  <div class="plan" id="planRow"></div>
-</section>
-
 <!-- ================= ISLAND MAP ================= -->
 <section aria-label="Island map">
   <h2>The Island Map</h2>
@@ -475,19 +457,6 @@ var PORTALS = {
 };
 var PORTAL_ORDER = ["telugu","learning","shines","brain","art","talks"];
 
-var PLAN = {
-  Mon:["learning","brain","telugu"],
-  Tue:["learning","shines","telugu"],
-  Wed:["learning","art","telugu"],
-  Thu:["learning","talks","telugu"],
-  Fri:["learning","brain","telugu"],
-  Sat:["art","shines","talks"],
-  Sun:["shines","art","telugu"]
-};
-var DAY_FULL = { Mon:"Monday", Tue:"Tuesday", Wed:"Wednesday", Thu:"Thursday", Fri:"Friday", Sat:"Saturday", Sun:"Sunday" };
-
-function planIdsForDay(dayKey){ return (PLAN[dayKey] || []).slice(); }
-
 function greetingForHour(h){
   if (h >= 21 || h < 5)  return "Good night, Sreshta \u2014 time for a bedtime story";
   if (h < 12)            return "Good morning, Sreshta";
@@ -512,43 +481,16 @@ function istDateLine(){
   } catch (e) { return ""; }
 }
 
-var LANTERN = '<svg width="30" height="38" viewBox="0 0 30 38" aria-hidden="true">'
-  + '<path d="M11 4 a4 4 0 0 1 8 0" fill="none" stroke="{A}" stroke-width="2"/>'
-  + '<rect x="9" y="7" width="12" height="3" rx="1.5" fill="{A}"/>'
-  + '<path d="M6 13 h18 l-2.4 15 a3 3 0 0 1 -3 2.4 H11.4 a3 3 0 0 1 -3 -2.4 Z" fill="{A}" opacity="0.28"/>'
-  + '<path d="M6 13 h18 l-2.4 15 a3 3 0 0 1 -3 2.4 H11.4 a3 3 0 0 1 -3 -2.4 Z" fill="none" stroke="{A}" stroke-width="1.8"/>'
-  + '<ellipse cx="15" cy="20" rx="3.4" ry="4.6" fill="#FFE9A8"/>'
-  + '<rect x="10" y="33.4" width="10" height="2.6" rx="1.3" fill="{A}"/></svg>';
-
-function renderPlan(dayKey){
-  var row = document.getElementById("planRow");
-  var ids = planIdsForDay(dayKey);
-  row.innerHTML = ids.map(function(id){
-    var p = PORTALS[id];
-    return '<a class="lantern" data-plan="' + id + '" href="' + p.url + '">'
-      + LANTERN.split("{A}").join(p.accent)
-      + '<div class="lname">' + p.name + '</div>'
-      + '<div class="lmark">' + p.landmark + '</div>'
-      + '<div class="lgo">Visit &rarr;</div></a>';
-  }).join("");
-  document.getElementById("planDay").textContent =
-    "Your three lanterns for " + (DAY_FULL[dayKey] || "today");
-}
-
 function init(){
   var t = istNow();
   document.getElementById("greeting").textContent = greetingForHour(t.hour);
   document.getElementById("istDate").textContent = istDateLine();
-  renderPlan(t.dayKey);
 }
 init();
 
 window.PORTALS = PORTALS;
 window.PORTAL_ORDER = PORTAL_ORDER;
-window.PLAN = PLAN;
-window.planIdsForDay = planIdsForDay;
 window.greetingForHour = greetingForHour;
-window.renderPlan = renderPlan;
 </script>
 </body>
 </html>
