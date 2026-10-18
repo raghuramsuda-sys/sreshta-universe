@@ -122,11 +122,11 @@ footer .f2{font-size:12.5px;margin-top:4px}
     <circle cx="15" cy="72" r="5" fill="#FFC94D"/><circle cx="325" cy="72" r="5" fill="#FFC94D"/>
   </svg>
   <h1><span class="gold">Sreshta&rsquo;s</span> Starlight Island</h1>
-  <p class="tag">Nine magical worlds, one island home</p>
+  <p class="tag">Ten magical worlds, one island home</p>
   <p class="greet" id="greeting">Hello, Sreshta</p>
   <p class="dateline" id="istDate">&nbsp;</p>
 
-  <!-- welcome row: all eight guide symbols -->
+  <!-- welcome row: all nine guide symbols -->
   <div class="welcome" aria-label="Your island friends">
     <div class="gfig" data-guide="telugu">
       <svg viewBox="0 0 72 72" role="img" aria-label="Moon and book, for Telugu">
@@ -249,6 +249,28 @@ footer .f2{font-size:12.5px;margin-top:4px}
         <path d="M25 49 h8 c0 4.2 -1.7 6.8 -4 8.4 c-2.3 -1.6 -4 -4.2 -4 -8.4 Z" fill="#FFC94D"/>
       </svg><span>Gusti</span>
     </div>
+    <div class="gfig" data-guide="mira">
+      <svg viewBox="0 0 72 72" role="img" aria-label="Mira the Meerkat">
+        <path d="M44 63 C57 62 64 53 62 41" stroke="#B98343" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+        <path d="M62 41 C61.6 38 60.8 35.6 59.4 33.6" stroke="#6B4423" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+        <ellipse cx="28" cy="66" rx="5.5" ry="2.6" fill="#B98343"/><ellipse cx="42" cy="66" rx="5.5" ry="2.6" fill="#B98343"/>
+        <ellipse cx="35" cy="50" rx="12.5" ry="15.5" fill="#D9A05B"/>
+        <ellipse cx="35" cy="53" rx="7" ry="10.5" fill="#F6E3BC"/>
+        <path d="M24.5 44 q-3.5 4 -1 8 M45.5 44 q3.5 4 1 8" stroke="#B98343" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+        <ellipse cx="31" cy="46" rx="2" ry="3" fill="#B98343" transform="rotate(14 31 46)"/>
+        <ellipse cx="39" cy="46" rx="2" ry="3" fill="#B98343" transform="rotate(-14 39 46)"/>
+        <circle cx="25.5" cy="19" r="3.6" fill="#C98F3D"/><circle cx="44.5" cy="19" r="3.6" fill="#C98F3D"/>
+        <circle cx="25.5" cy="19" r="1.7" fill="#F6E3BC"/><circle cx="44.5" cy="19" r="1.7" fill="#F6E3BC"/>
+        <circle cx="35" cy="27" r="11.5" fill="#D9A05B"/>
+        <ellipse cx="30.3" cy="25" rx="3.4" ry="2.7" fill="#6B4423" transform="rotate(-12 30.3 25)"/>
+        <ellipse cx="39.7" cy="25" rx="3.4" ry="2.7" fill="#6B4423" transform="rotate(12 39.7 25)"/>
+        <circle cx="30.3" cy="25" r="1.5" fill="#241305"/><circle cx="39.7" cy="25" r="1.5" fill="#241305"/>
+        <circle cx="30.8" cy="24.4" r="0.55" fill="#fff"/><circle cx="40.2" cy="24.4" r="0.55" fill="#fff"/>
+        <ellipse cx="35" cy="31.5" rx="5.4" ry="4" fill="#F6E3BC"/>
+        <circle cx="35" cy="29.8" r="1.6" fill="#5B3A1A"/>
+        <path d="M35 31.4 q0 2 -2.2 2 M35 31.4 q0 2 2.2 2" stroke="#8A5A2B" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      </svg><span>Mira</span>
+    </div>
   </div>
 </header>
 
@@ -258,8 +280,8 @@ footer .f2{font-size:12.5px;margin-top:4px}
   <h2>The Island Map</h2>
   <p class="sub">Follow the gold path &mdash; tap a place to visit its world</p>
   <div class="mapwrap">
-    <svg class="pathsvg" viewBox="0 0 360 980" preserveAspectRatio="none" aria-hidden="true">
-      <path d="M90 30 C90 120 270 130 270 215 C270 300 90 310 90 395 C90 480 270 490 270 575 C270 660 90 670 90 755 C90 840 270 850 270 935" fill="none" stroke="#FFC94D" stroke-width="4" stroke-dasharray="2 13" stroke-linecap="round" opacity="0.55"/>
+    <svg class="pathsvg" viewBox="0 0 360 1160" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M90 30 C90 120 270 130 270 215 C270 300 90 310 90 395 C90 480 270 490 270 575 C270 660 90 670 90 755 C90 840 270 850 270 935 C270 1020 90 1030 90 1115" fill="none" stroke="#FFC94D" stroke-width="4" stroke-dasharray="2 13" stroke-linecap="round" opacity="0.55"/>
     </svg>
     <div class="map bob" id="islandMap">
 
@@ -553,6 +575,49 @@ footer .f2{font-size:12.5px;margin-top:4px}
         <p class="visit">Visit &rarr;</p>
       </a>
 
+      <a class="card" data-portal="safe" href="https://raghuramsuda-sys.github.io/sreshta-safe-smart/">
+        <svg class="lm" preserveAspectRatio="xMidYMax meet" data-landmark="lookout-burrow" viewBox="0 0 120 88" role="img" aria-label="The Lookout Burrow">
+          <circle cx="14" cy="12" r="6" fill="#FFC94D"/>
+          <path d="M14 3 v3 M14 18 v3 M5 12 h3 M20 12 h3 M7.5 5.5 l2 2 M20.5 5.5 l-2 2" stroke="#FFC94D" stroke-width="1.6" stroke-linecap="round"/>
+          <path d="M4 88 C8 64 28 55 60 55 C92 55 112 64 116 88 Z" fill="#E3B566"/>
+          <path d="M4 88 C8 64 28 55 60 55 C74 55 86 57 96 61 C80 63 60 63 42 61 C26 66 14 74 10 88 Z" fill="#D9A44E" opacity="0.55"/>
+          <path d="M28 88 v-9 a9 9 0 0 1 18 0 v9 Z" fill="#5B3A1A"/>
+          <path d="M31.5 88 v-8 a5.5 5.5 0 0 1 11 0 v8 Z" fill="#3A2410"/>
+          <rect x="78" y="34" width="3.6" height="26" fill="#8A5A2B"/>
+          <rect x="99" y="34" width="3.6" height="26" fill="#8A5A2B"/>
+          <rect x="72" y="30" width="37" height="4.6" rx="2.3" fill="#A9713A"/>
+          <path d="M104 30 V15" stroke="#8A5A2B" stroke-width="1.8"/>
+          <path d="M104 15 L114 17.5 L104 20.5 Z" fill="#FFC94D"/>
+          <path d="M94.5 29 C99 28.6 101 25.5 100 22" stroke="#B98343" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+          <ellipse cx="90" cy="23.5" rx="4.4" ry="6" fill="#D9A05B"/>
+          <ellipse cx="90" cy="25" rx="2.4" ry="3.8" fill="#F6E3BC"/>
+          <circle cx="86.8" cy="15.8" r="1.5" fill="#C98F3D"/><circle cx="93.2" cy="15.8" r="1.5" fill="#C98F3D"/>
+          <circle cx="90" cy="17.5" r="4.3" fill="#D9A05B"/>
+          <circle cx="88.2" cy="16.8" r="0.95" fill="#241305"/><circle cx="91.8" cy="16.8" r="0.95" fill="#241305"/>
+          <ellipse cx="90" cy="19.8" rx="2.1" ry="1.5" fill="#F6E3BC"/>
+          <circle cx="90" cy="18.9" r="0.7" fill="#5B3A1A"/>
+          <path d="M14 84 q2 -5 4 0 M58 86 q2 -5 4 0 M104 84 q2 -5 4 0" stroke="#2B8A3E" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="guideRow">
+          <svg width="34" height="34" viewBox="0 0 72 72" data-guide-mini="mira" aria-hidden="true">
+            <path d="M44 63 C57 62 64 53 62 41" stroke="#B98343" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+            <path d="M62 41 C61.6 38 60.8 35.6 59.4 33.6" stroke="#6B4423" stroke-width="5.5" fill="none" stroke-linecap="round"/>
+            <ellipse cx="35" cy="50" rx="12.5" ry="15.5" fill="#D9A05B"/>
+            <ellipse cx="35" cy="53" rx="7" ry="10.5" fill="#F6E3BC"/>
+            <circle cx="25.5" cy="19" r="3.6" fill="#C98F3D"/><circle cx="44.5" cy="19" r="3.6" fill="#C98F3D"/>
+            <circle cx="35" cy="27" r="11.5" fill="#D9A05B"/>
+            <ellipse cx="30.3" cy="25" rx="3.4" ry="2.7" fill="#6B4423" transform="rotate(-12 30.3 25)"/>
+            <ellipse cx="39.7" cy="25" rx="3.4" ry="2.7" fill="#6B4423" transform="rotate(12 39.7 25)"/>
+            <circle cx="30.3" cy="25" r="1.5" fill="#241305"/><circle cx="39.7" cy="25" r="1.5" fill="#241305"/>
+            <ellipse cx="35" cy="31.5" rx="5.4" ry="4" fill="#F6E3BC"/>
+            <circle cx="35" cy="29.8" r="1.6" fill="#5B3A1A"/>
+          </svg>
+          <div><div class="pname">Sreshta's Safe &amp; Smart</div><div class="markname">Lookout Burrow &middot; Mira the Meerkat</div></div>
+        </div>
+        <p class="ptag">Smart, not scared</p>
+        <p class="visit">Visit &rarr;</p>
+      </a>
+
     </div>
   </div>
 </section>
@@ -590,6 +655,9 @@ footer .f2{font-size:12.5px;margin-top:4px}
       <a class="prow" data-portal="money" href="https://raghuramsuda-sys.github.io/sreshta-money-tree/">
         <div class="pinfo"><div class="pname2">Money Tree</div><div class="ptag2">Save, spend, share</div></div><span class="open">Open &rarr;</span>
       </a>
+      <a class="prow" data-portal="safe" href="https://raghuramsuda-sys.github.io/sreshta-safe-smart/">
+        <div class="pinfo"><div class="pname2">Safe &amp; Smart</div><div class="ptag2">Smart, not scared</div></div><span class="open">Open &rarr;</span>
+      </a>
     </div>
     <p class="honest">Progress and parent dashboards live inside each world &mdash; open a world, then tap Parents there.</p>
   </div>
@@ -597,7 +665,7 @@ footer .f2{font-size:12.5px;margin-top:4px}
 </main>
 
 <footer>
-  <p class="f1">9 worlds &bull; 1 island</p>
+  <p class="f1">10 worlds &bull; 1 island</p>
   <p class="f2">Made with love for Sreshta</p>
 </footer>
 </div>
@@ -613,9 +681,10 @@ var PORTALS = {
   talks:    { id:"talks",    name:"Sreshta Talks",  tag:"Face the camera and talk",           guide:"Kiki the Parrot",    landmark:"Ring-Light Studio",accent:"#FF6B81", url:"https://raghuramsuda-sys.github.io/sreshta-talks/" },
   story:    { id:"story",    name:"Sreshta's Story World", tag:"Read, imagine, tell your own", guide:"Lumi the Firefly", landmark:"Moonlight Library",accent:"#FFD93B", url:"https://raghuramsuda-sys.github.io/sreshta-story-world/" },
   exams:    { id:"exams",    name:"Exam Practice", tag:"Practise for real school exams",     guide:"Mimi the Bunny",   landmark:"Little Schoolhouse",accent:"#B388FF", url:"https://raghuramsuda-sys.github.io/sreshta-exam-practice/" },
-  money:    { id:"money",    name:"Sreshta's Money Tree", tag:"Save, spend, share",          guide:"Gusti the Squirrel", landmark:"The Money Tree",  accent:"#69DB7C", url:"https://raghuramsuda-sys.github.io/sreshta-money-tree/" }
+  money:    { id:"money",    name:"Sreshta's Money Tree", tag:"Save, spend, share",          guide:"Gusti the Squirrel", landmark:"The Money Tree",  accent:"#69DB7C", url:"https://raghuramsuda-sys.github.io/sreshta-money-tree/" },
+  safe:     { id:"safe",     name:"Sreshta's Safe & Smart", tag:"Smart, not scared",         guide:"Mira the Meerkat",   landmark:"The Lookout Burrow", accent:"#FFB020", url:"https://raghuramsuda-sys.github.io/sreshta-safe-smart/" }
 };
-var PORTAL_ORDER = ["telugu","learning","shines","brain","art","talks","story","exams","money"];
+var PORTAL_ORDER = ["telugu","learning","shines","brain","art","talks","story","exams","money","safe"];
 
 function greetingForHour(h){
   if (h >= 21 || h < 5)  return "Good night, Sreshta \u2014 time for a bedtime story";
