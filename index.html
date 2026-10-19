@@ -86,6 +86,19 @@ footer{text-align:center;margin-top:24px;color:var(--softgold)}
 footer .f1{font-family:Georgia,"Times New Roman",serif;font-size:17px;color:var(--goldlt)}
 footer .f2{font-size:12.5px;margin-top:4px}
 
+/* ---------- universe chrome (the road up to the Main Door) ---------- */
+/* TEMPORARY transition banner: remove this rule together with the .univBanner
+   anchor once the family's home habit has switched from the Island to the
+   Universe Main Door. */
+.univBanner{display:block;margin-top:12px;padding:9px 14px;border-radius:999px;text-align:center;
+  text-decoration:none;font-weight:700;font-size:14.5px;line-height:1.3;color:#2a1454;
+  background:linear-gradient(90deg,var(--goldlt),var(--gold));border:1.5px solid #FFF2C4;
+  box-shadow:0 3px 12px rgba(10,2,28,.4)}
+.universeBtn{position:fixed;left:12px;bottom:12px;z-index:50;display:inline-flex;align-items:center;gap:6px;
+  min-height:48px;padding:10px 18px;border-radius:999px;text-decoration:none;
+  background:linear-gradient(165deg,var(--card2),var(--card));border:1.5px solid var(--gold);
+  color:var(--goldlt);font-weight:700;font-size:15.5px;box-shadow:0 4px 14px rgba(10,2,28,.5)}
+
 @media (prefers-reduced-motion: reduce){
   .star,.cloud,.bob{animation:none}
 }
@@ -111,6 +124,10 @@ footer .f2{font-size:12.5px;margin-top:4px}
 </div>
 
 <div class="wrap">
+<!-- TEMPORARY (Oct 2026): transition banner to the new Universe Main Door.
+     Remove this banner (and the .univBanner CSS) once the family's home habit
+     has switched from the Island to the Universe. -->
+<a class="univBanner" href="https://raghuramsuda-sys.github.io/sreshta-main-door/">🏠 Our new home is the Universe &mdash; one door for everything &rarr;</a>
 <header>
   <!-- rainbow bridge -->
   <svg class="bridge" viewBox="0 0 340 78" role="img" aria-label="Rainbow bridge">
@@ -733,6 +750,10 @@ footer .f2{font-size:12.5px;margin-top:4px}
   <p class="f2">Made with love for Sreshta</p>
 </footer>
 </div>
+
+<!-- road up: back to the Universe Main Door (same fixed bottom-left pill
+     pattern as the sibling portals' back buttons) -->
+<a class="universeBtn" href="https://raghuramsuda-sys.github.io/sreshta-main-door/" aria-label="Back to Sreshta's Universe, the Main Door">&larr; Universe</a>
 
 <script>
 "use strict";
